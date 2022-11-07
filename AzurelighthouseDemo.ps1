@@ -13,17 +13,17 @@ A really good overview of Lighthouse is available here https://techcommunity.mic
 
 #Where To Save the Template Files
 # $PathToTemplateFiles = 'C:\temp'
-$PathToTemplateFiles = 'C:\temp\Sasktel\LightHouse\Azure-Light-House'
+$PathToTemplateFiles = 'C:\temp\Sasktel\Scripttest'
 
 #Customer (to be managed) Subscription Info
 $CustomerSubscriptionId = "773c2382-4ca2-4547-8889-14bd1d86df9d"
 $CustomerSubscriptionName = "Pay-As-You-Go"
 
 #Managed Service Provider (MSP) Subscription Info 
-$SubscriptionName = "subscription name"
+$SubscriptionName = "SaskTel Lab"
 $Location = "Canada Central"
 
-$AdminGroup = "Customer1Admins" #Azure AD admin group in the Managed Service Provider(MSP) tenant
+$AdminGroup = "CloudTeam1-TestGrp" #Azure AD admin group in the Managed Service Provider(MSP) tenant
 $AdminGroupMember = Get-AzureADUser -SearchString "User Display Name" #That will manage customer resources
 $MSPOfferName = 'Customer1 Lighthouse MSP Access' #The name that appears in the customers lighthouse portal, must be unique
 
