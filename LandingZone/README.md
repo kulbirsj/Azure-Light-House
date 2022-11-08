@@ -1,3 +1,9 @@
+# Azure landing Zone
+- Azure landing zome conept is based on Microsoft Best practice for adoption of azure : https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/landing-zone/
+- Consideration: https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/landing-zone/choose-landing-zone-option#deployment-considerations
+- Landing zone option for Hub & Spoke : https://github.com/Azure/Enterprise-Scale/blob/main/docs/reference/adventureworks/README.md
+
+
 # Must be installed to Use this tool
 
 - Azure Cli https://docs.microsoft.com/en-us/cli/azure/install-azure-cli
