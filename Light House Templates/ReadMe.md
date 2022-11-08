@@ -19,7 +19,7 @@ New-AzSubscriptionDeployment -Name <deploymentName> -Location <AzureRegion> -Tem
 New-AzSubscriptionDeployment -Name <deploymentName> -Location <AzureRegion> -TemplateUri <templateUri> -TemplateParameterUri <parameterUri> -Verbose
 
 
-## Onbording customer subscription to Azure light house
+## Onbording customer subscription to Azure light house using ARM templates clicking 'Deploy to Azure'
 
 1. Deploy the this template to onabord subscription to MSP
 [![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fkulbirsj%2FAzure-Light-House%2Fmain%2FLight%20House%20Templates%2FOnboard%2FSusbcriptiondelegatedResourceManagement.json)
