@@ -1,3 +1,3 @@
-# Tier 3
+# Tier 2
 
-This tier will provision the resources required for any number of Landing Zone subscriptions. The premise is that an engineer will be able to point Terraform to an existing subscription and deploy a configuration that creates a Virtual network that is peered back to the Platform Virtual network and uses the DNS for the Domain Controllers contained within. This should happen automatically when a new Landing Zone is provisioned within the customers environment due to how Terraform handles variables.
+This can be used to deploy any number of Landing Zone subscriptions.  Each landing zone will contain a Virtual Network that is peered back to the platform virtual network created in Tier 2.This should happen automatically when a new Landing Zone is provisioned within the customers environment due to how Terraform handles variables.
