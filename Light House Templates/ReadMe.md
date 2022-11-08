@@ -1,6 +1,23 @@
 # Templates in these directory is to on-board to Light house
 PREREQUSITE:
+- The tenant ID of the service provider's tenant (where you will be managing the customer's resources).
+- The tenant ID of the customer's tenant (which will have resources managed by the service provider).
+- The subscription IDs for each specific subscription in the customer's tenant that will be managed by the service provider (or that contains the resource group(s) that will be managed by the service provider).
+- The Microsoft.ManagedServices resource provider should be registered for the customer subscription.
+- Download the templates on local system for manual deployment using Azure CLI or Powershell.
 - Login to Azure portal with Owner role
+
+
+# Using Azure Powerhsell:
+- Download and install the Azure powershell 
+- Log in first with Connect-AzAccount if you're not using Cloud Shell
+
+# Deploy Azure Resource Manager template using template and parameter file locally
+New-AzSubscriptionDeployment -Name <deploymentName> -Location <AzureRegion> -TemplateFile <pathToTemplateFile> -TemplateParameterFile <pathToParameterFile>        -Verbose
+
+# Deploy Azure Resource Manager template that is located externally or in Github
+New-AzSubscriptionDeployment -Name <deploymentName> -Location <AzureRegion> -TemplateUri <templateUri> -TemplateParameterUri <parameterUri> -Verbose
+
 
 ## Onbording customer subscription to Azure light house
 
