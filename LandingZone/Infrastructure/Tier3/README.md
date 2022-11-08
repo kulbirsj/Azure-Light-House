@@ -1,2 +1,2 @@
-# Tier 1
+# Tier 3
 This tier will provision the management groups under the Tenant Root group. It will assign the required policies and Azure AD Groups aligned with those management groups and customer decisions.
