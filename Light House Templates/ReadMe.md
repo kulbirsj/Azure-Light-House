@@ -14,3 +14,9 @@ PREREQUSITE:
 
 3. Deploy this template to onboard resource group to MSP
 [![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fkulbirsj%2FAzure-Light-House%2Fmain%2FLight%2520House%2520Templates%2FOnboard%2FMultiRG.json)
+
+
+### Enabling Policies with Azure light house
+
+1. This template deploys an Azure Policy that will audit for delegation assignments
+[![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fkulbirsj%2FAzure-Light-House%2Fmain%2FLight%2520House%2520Templates%2FPolicies%2FAuditdelegation.json)
