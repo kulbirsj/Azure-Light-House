@@ -13,7 +13,7 @@ To Destroy the Landing Zone, we need to update Destroy.ps1 script and make sure 
 
 # How to Customize, Deploy and Destroy
 
-Deploy:
+## Deploy:
 
 Step 1: Launch the Visual Studio Code and open the solution folder.
 
@@ -25,7 +25,7 @@ Step 4: Now you are all set to deploy the Landing Zone. Use the terminal (PowerS
 
 Step 5: If the deployment is successful validate the resources in Azure and if any failures are encountered, troubleshoot, apply the changes and rerun the deployment.
 
-Destroy:
+## Destroy:
 
 Assuming Landing Zone is deployed successfully using above steps and you plan to destroy the Landing Zone follow below steps.
 
