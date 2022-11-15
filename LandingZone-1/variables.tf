@@ -274,6 +274,39 @@ variable "landingzone_dcsubnet_name" {
   description = "The name of the DC Subnet"
 }
 
+# Landing Zone Spoke Virtual Network Variables
+
+variable "spoke_network_rg_name" {
+  type = string
+  description = "Name of the Networking resource group."
+  default = "RG-Networking"
+}
+
+variable "spoke_landingzone_vnet_name" {
+  type = string
+  description = "The name of the Virtual Network"
+  default = "vnet-landingzone-001"
+}
+
+variable "spoke_landingzone_vnet_address_space" {
+  type = list(string)
+  description = "The address space prefix for the virtual network in CIDR format"
+  default = ["10.0.0.0/16"]
+}
+
+variable "spoke_landingzone_subnets" {
+  type = map
+  description = "A list of subnets and IP ranges for the VNET"
+  default = {
+    Subnet1 = ["10.0.250.0/24"]
+  }
+
+  variable "lz_rt_name" {
+  type = string
+  description = "The prefix used for network security groups"
+  default = "spoke-to-hub-rt"
+}
+
 #Identity Variables
 variable "deploy_identity" {
   type = bool

@@ -3,6 +3,11 @@ variable "resource_group_name" {
   default = "networking_rg"
 }
 
+variable "resource_group_name" {
+  type = string
+  default = "spoke_networking_rg"
+}
+
 variable "location" {
   type = string
   default = "northcentralus"
@@ -47,3 +52,10 @@ variable "landingzone_NSG_Prefix" {
   description = "The prefix used for network security groups"
   default = "NSG"
 }
+
+variable "lz_rt_name" {
+  type = string
+  description = "The prefix used for network security groups"
+  default = "spoke-to-hub-rt"
+}
+

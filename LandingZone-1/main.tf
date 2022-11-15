@@ -103,6 +103,17 @@ module "landingzone_virtual_network" {
   landingzone_vnet_tags          = var.landingzone_vnet_tags
 }
 
+#Spoke Virtual Network Module Deployment
+
+module "spoke_landingzone_virtual_network" {
+  source                      = "./modules/landingzone-virtual-network"
+  location                    = var.location
+  resource_group_name         = var.spoke_network_rg_name
+  spoke_landingzone_vnet_name          = var.spoke_landingzone_vnet_name
+  spoke_landingzone_vnet_address_space = var.spoke_landingzone_vnet_address_space
+  spoke_landingzone_subnets            = var.spoke_landingzone_subnets
+}
+
 #LandingZone Domain Controller Subnet details
 
 data "azurerm_subnet" "dc_subnet" {

@@ -128,10 +128,35 @@ landingzone_subnets = {
   snet-dc-prod-cac-az     = ["172.21.0.128/26"]
 }
 
+#Landing Zone Spoke Virtual Network
+
+#Resource Group Name for Networking RG
+spoke_network_rg_name = "rg-prod-cac-vnet-spoke"
+#Virtual network Name
+spoke_landingzone_vnet_name = "Vnet-prod-cac-az-spoke"
+#Virtual Network address space. 
+#Separate with commas. Example: ["10.0.0.0/16","10.0.1.0/16"]
+spoke_landingzone_vnet_address_space = ["172.20.0.0/21"]
+#Virtual Network DNS Servers. Set to an on prem DC initially.
+
+#The name of the DC Subnet. This must be defined for the identity module
+#MUST match one of the subnet names (Below)
+#landingzone_dcsubnet_name = "snet-dc-prod-cac-az"
+#A list of subnets being added to the VNET
+#Format: Name = ListOfSubnets
+#Example: PrimarySubnet = ["10.0.0.0/24"]
+#Example: SecondarySubnet = ["10.0.1.0/24","10.0.2.0/24"]
+spoke_landingzone_subnets = {
+  #GatewaySubnet    = ["172.21.0.0/26"]
+  #AzureBastionSubnet    = ["172.21.0.64/26"]
+  snet-spoke-prod-cac-az  = ["172.20.1.0/24"]`
+}
+
+
 #Identity (Domain Controllers)
 
 #Whether or not to deploy the identity module. Set to 'true' to deploy.
-deploy_identity = true
+deploy_identity = false
 
 #Number of Domain Controllers
 ident_dc_count = 1 #Allowed values are only 1 or 2.
@@ -225,7 +250,7 @@ gtwy_local_tags = {
 #Networking - Express Route
 
 #Whether or not to deploy the express route module. Set to true to deploy.
-deploy_expressroute = true
+deploy_expressroute = false
 #Name of VPN Gateway with gateway type: ExpressRoute
 expressroute_vpn_gtwy_name = "egw-prod-cac-01"
 #Name of the Express Route Circuit

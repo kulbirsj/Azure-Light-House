@@ -1,6 +1,6 @@
 .\Login.ps1
 
-$landingZoneSubzcriptionID = "3e96e598-99b1-4f61-8b48-8a66790f3cd0"
+$landingZoneSubzcriptionID = "773c2382-4ca2-4547-8889-14bd1d86df9d"
 
 $Config = Resolve-Path ".\config.tfvars"
 
