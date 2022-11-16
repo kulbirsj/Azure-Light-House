@@ -3,7 +3,7 @@ variable "resource_group_name" {
   default = "networking_rg"
 }
 
-variable "resource_group_name" {
+variable "spoke_resource_group_name" {
   type = string
   default = "spoke_networking_rg"
 }
@@ -18,7 +18,19 @@ variable "landingzone_vnet_name" {
   description = "The name of the Virtual Network"
 }
 
+variable "spoke_landingzone_vnet_name" {
+  type = string
+  description = "The name of the Virtual Network"
+}
+
 variable "landingzone_vnet_address_space" {
+  type = list(string)
+  description = "The address space prefix for the virtual network in CIDR format"
+  default = ["10.0.0.0/16"]
+}
+
+
+variable "spoke_landingzone_vnet_address_space" {
   type = list(string)
   description = "The address space prefix for the virtual network in CIDR format"
   default = ["10.0.0.0/16"]
@@ -40,6 +52,15 @@ variable "landingzone_vnet_tags" {
 }
 
 variable "landingzone_subnets" {
+  type = map
+
+  default = {
+    GatewaySubnet = ["10.0.250.0/24"]
+  }
+}
+
+
+variable "spoke_landingzone_subnets" {
   type = map
 
   default = {

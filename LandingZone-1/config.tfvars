@@ -131,7 +131,7 @@ landingzone_subnets = {
 #Landing Zone Spoke Virtual Network
 
 #Resource Group Name for Networking RG
-spoke_network_rg_name = "rg-prod-cac-vnet-spoke"
+spoke_resource_group_name = "rg-prod-cac-vnet-spoke"
 #Virtual network Name
 spoke_landingzone_vnet_name = "Vnet-prod-cac-az-spoke"
 #Virtual Network address space. 
@@ -149,7 +149,7 @@ spoke_landingzone_vnet_address_space = ["172.20.0.0/21"]
 spoke_landingzone_subnets = {
   #GatewaySubnet    = ["172.21.0.0/26"]
   #AzureBastionSubnet    = ["172.21.0.64/26"]
-  snet-spoke-prod-cac-az  = ["172.20.1.0/24"]`
+  snet-spoke-prod-cac-az  = ["172.20.1.0/24"]
 }
 
 

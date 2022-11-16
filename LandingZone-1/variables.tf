@@ -276,7 +276,7 @@ variable "landingzone_dcsubnet_name" {
 
 # Landing Zone Spoke Virtual Network Variables
 
-variable "spoke_network_rg_name" {
+variable "spoke_resource_group_name" {
   type = string
   description = "Name of the Networking resource group."
   default = "RG-Networking"
@@ -300,6 +300,7 @@ variable "spoke_landingzone_subnets" {
   default = {
     Subnet1 = ["10.0.250.0/24"]
   }
+}
 
   variable "lz_rt_name" {
   type = string

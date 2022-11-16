@@ -101,17 +101,28 @@ module "landingzone_virtual_network" {
   landingzone_subnets            = var.landingzone_subnets
   landingzone_NSG_Prefix         = var.landingzone_NSG_Prefix
   landingzone_vnet_tags          = var.landingzone_vnet_tags
+  spoke_landingzone_vnet_name          = var.spoke_landingzone_vnet_name
+  
 }
 
 #Spoke Virtual Network Module Deployment
+/*data "azurerm_network" "network" {
+  virtual_network_name = var.landingzone_vnet_name
+  resource_group_name  = var.network_rg_name
+  depends_on = [
+    module.landingzone_virtual_network
+  ]
+}*/
 
 module "spoke_landingzone_virtual_network" {
   source                      = "./modules/landingzone-virtual-network"
   location                    = var.location
-  resource_group_name         = var.spoke_network_rg_name
+  spoke_resource_group_name         = var.spoke_resource_group_name
   spoke_landingzone_vnet_name          = var.spoke_landingzone_vnet_name
   spoke_landingzone_vnet_address_space = var.spoke_landingzone_vnet_address_space
   spoke_landingzone_subnets            = var.spoke_landingzone_subnets
+  landingzone_vnet_dns_servers   = var.landingzone_vnet_dns_servers
+  landingzone_vnet_name          = var.landingzone_vnet_name
 }
 
 #LandingZone Domain Controller Subnet details
